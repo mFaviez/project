@@ -1,0 +1,38 @@
+/* CSS Document */
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+body {
+	padding-top: 25px;
+	background-image: url("../img/img-fond.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.galerie [class*="col"] {
+	margin-bottom: 20px;
+}
+.rs {
+	background-color: #343a40;
+	color: #fff;
+	margin-right: 4px;
+}
+.rs:last-child {
+	margin-right: 0;
+}
+.fab-rs {
+	width: 12px;
+}
+.navbar-brand {
+    float: left; 
+}
+.navbar-brand i {
+	color: rgba(255, 255, 255, 0.5);
+}
+.navbar-brand i:hover {
+	color: rgba(255, 255, 255, 0.75);
+}
+h1 {
+	margin: 20px 0 20px 0;
+}
