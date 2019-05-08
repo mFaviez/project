@@ -7,6 +7,8 @@
 <meta name="description" content="Bienvenue à Vannes ! Ce site vous donneras toutes les informations utiles pour votre prochain séjour dans notre belle ville !">	
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">	
+	<link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">	
 </head>
 
@@ -41,10 +43,10 @@
 						<a class="navbar-brand" href="index.html"><i class="fas fa-home"></i></a>
 						<ul class="navbar-nav">
 							<li class="nav-item"><a class="nav-link" href="">Visites</a></li>
-							<li class="nav-item"><a class="nav-link" href="">Restaurants</a></li>
+							<li class="nav-item"><a class="nav-link" href="view/restaurant.php">Restaurants</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Météo</a></li>
 							<li class="nav-item"><a class="nav-link" href="">Contact</a></li> 
-							<li class="nav-item" id="connexion"><a class="nav-link" href="l"><i class="fas fa-user"></i> Connexion</a></li>			
+							<li class="nav-item" id="connexion"><a class="nav-link" href="view/connexion.php"><i class="fas fa-user"></i> Connexion</a></li>			
 						</ul>
 					<!-- FIN DU MENU -->
 						</div>
