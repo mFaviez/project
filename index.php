@@ -40,12 +40,12 @@
   					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<div class="col-lg-12">	
 					<!-- MENU -->	
-						<a class="navbar-brand" href="index.html"><i class="fas fa-home"></i></a>
+						<a class="navbar-brand" href="index.php"><i class="fas fa-home"></i></a>
 						<ul class="navbar-nav">
-							<li class="nav-item"><a class="nav-link" href="">Visites</a></li>
+							<li class="nav-item"><a class="nav-link" href="view/visite.php">Visites</a></li>
 							<li class="nav-item"><a class="nav-link" href="view/restaurant.php">Restaurants</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Météo</a></li>
-							<li class="nav-item"><a class="nav-link" href="">Contact</a></li> 
+							<li class="nav-item"><a class="nav-link" href="view/contact.php">Contact</a></li> 
 							<li class="nav-item" id="connexion"><a class="nav-link" href="view/connexion.php"><i class="fas fa-user"></i> Connexion</a></li>			
 						</ul>
 					<!-- FIN DU MENU -->
@@ -111,6 +111,38 @@
 		</section>
 	</div>	
 <!-- FIN DE LA GALERIE -->
+<!-- LES SECTIONS -->	
+	<div class="col-md-12">	
+		<section class="row bg-light" style="margin-top: 20px;">
+			<h2 style="margin-top: 10px;">Retrouvez tous nos bons plans&nbsp;!</h2>
+		</section>
+			
+		<section class="row bg-light">	
+			<div class="col-md-4" style="background-color: #5fbda3;">
+				<a href="pages/visite.html" class="lienaccueil">
+					<h4 class="text-center margintop5px"><i class="fas fa-camera-retro"></i> Les visites</h4>
+					<img class="img-fluid" src="img/visite.jpg" alt="visites à Vannes">
+					<p class="text-justify">Vannes est une ville fortifiée située dans la région Bretagne. Sa vieille ville se caractérise par d'étroites rues pavées et des portes médiévales. Au centre, la cathédrale Saint-Pierre de Vannes allie les styles roman et gothique, tandis que la place des Lices est bordée de maisons à colombages colorées. Au sud, le port est doté de restaurants et de bateaux qui proposent des croisières dans le golfe du Morbihan.</p>
+				</a>	
+			</div>
+			<div class="col-md-4" style="background-color: #c4ac52;">
+				<a href="pages/restaurant.html" class="lienaccueil">
+					<h4 class="text-center margintop5px"><i class="fas fa-utensils"></i> Les restaurants</h4>
+					<img class="img-fluid" src="img/restaurant.jpg" alt="restaurant à Vannes">
+					<p class="text-justify">Profitez de l’ambiance décontractée de Vannes en vous installant dans un restaurant du port ou en gagnant les remparts. Les fruits de mer sont à l’honneur dans les meilleurs restaurants de Vannes et propices à une cuisine gastronomique dans les restaurants étoilés. A Vannes, on mange aussi japonais, indien ou chinois, pour réveiller son palais par des notes exotiques !</p>
+				</a>	
+			</div>	
+			<div class="col-md-4" style="background-color: #b86787;">
+				<a href="#" class="lienaccueil">
+					<h4 class="text-center margintop5px"><i class="fas fa-cloud-sun"></i> La météo</h4>
+					<img class="img-fluid" src="img/meteo.jpg" alt="météo à Vannes">
+					<p class="text-justify">Quel temps fait-il aujourd'hui et cet après-midi à Vannes ? Retrouvez les prévisions météo du jour, gratuites et détaillées pour la ville de Vannes 56000</p>
+					
+				</a>	
+			</div>				
+		</section>
+	</div>	
+<!-- FIN DES SECTIONS -->
 
 	
 <!-- FOOTER -->
@@ -124,8 +156,10 @@
 	
 	
 </div>	
-<script src="bootstrap/dist/js/bootstrap.min.js"></script>	
-<script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>				
+<script src="js/jquery-min.js"></script>
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>	
+<script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>				
+<script src="js/mon-jquery.js"></script>				
 
 <script>
 $('.carousel').carousel({
