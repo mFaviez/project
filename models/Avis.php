@@ -6,6 +6,8 @@
         private $_name;
         private $_title;
         private $_message;
+        private $_id_profil;
+        private $_date_time;
 
         public function __construct(array $data) {
             $this->hydrate($data);
@@ -64,5 +66,42 @@
         {
             $this->_message = $message;
         }
+
+
+        public function getId_profil()
+        {
+            return $this->_id_profil;
+        }
+
+
+        public function setId_profil($idProfil)
+        {
+            $this->_id_profil = $idProfil;
+        }
+
+
+        public function getDate_time()
+        {
+            return $this->_date_time;
+        }
+
+
+        public function setDate_time($dateMessage)
+        {
+            $this->_date_time = $dateMessage;
+        }
+		/*mika*/
+		public function getwarning_comm()
+        {
+            return $this->_warning_comm;
+        }
+
+
+        public function setwarning_comm($warning_comm)
+        {
+            $this->_warning_comm = $warning_comm;
+        }
+		/*mika*/
+
     }
 ?>

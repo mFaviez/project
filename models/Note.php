@@ -5,6 +5,8 @@
         private $_id;
         private $_restaurant;
         private $_note;
+        private $_id_profil;
+        private $_date_time;
 
         public function __construct(array $data) {
             $this->hydrate($data);
@@ -54,5 +56,30 @@
         {
             $this->_note = $note;
         }
+
+
+        public function getId_profil()
+        {
+            return $this->_id_profil;
+        }
+
+
+        public function setId_profil($id_profil)
+        {
+            $this->_id_profil = $id_profil;
+        }
+
+
+        public function getDate_time()
+        {
+            return $this->_date_time;
+        }
+
+
+        public function setDate_time($date_time)
+        {
+            $this->_date_time = $date_time;
+        }
+
 
     }

@@ -14,19 +14,28 @@
         //Ajoute le profil dans la bdd
         public function insert(Contact $contact) {
             $req = $this->_db->prepare('INSERT INTO contact(
-                                        who,  
+                                        who, 
+                                        name, 
+                                        lastname, 
                                         email, 
                                         subject, 
-                                        message) 
+                                        message,
+                                        date_time) 
                                         VALUES(
-                                        :who,  
+                                        :who, 
+                                        :name, 
+                                        :lastname, 
                                         :email,
                                         :subject,
-                                        :message)');
+                                        :message,
+                                        :date_time)');
             $req->bindValue(':who', strtolower($contact->getWho()));
+            $req->bindValue(':name', $contact->getName());
+            $req->bindValue(':lastname', strtolower($contact->getLastName()));
             $req->bindValue(':email', $contact->getEmail());
             $req->bindValue(':subject', $contact->getSubject());
             $req->bindValue(':message', $contact->getMessage());
+            $req->bindValue(':date_time', $contact->getDate_time());
             $req->execute();
         }
 

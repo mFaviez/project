@@ -11,6 +11,11 @@
                     <?= $userCount;?>
                 </p>
             </div>
+			<div class="row">
+                <p class="font-weight-bold">Nombre d'avis :
+                    <?= $nbAvis;?>
+                </p>
+            </div>
             <div class="row">
                 <p class="font-weight-bold">Date dernier message :
                     <?= date("d-m-Y à H:i:s", strtotime($dateLastMessage)); ?>

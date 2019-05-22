@@ -1,50 +1,54 @@
 <?php
 
 $path = array( //chemin des dossiers
-	'controllers' => 'controllers/',
+    'controllers' => 'controllers/',
     'include' => 'include/',
     'models' => 'models/',
     'css' => 'public/css/',
     'bootstrap' => 'public/css/bootstrap/',
-	'img' => 'public/img/',
+    'elt' => 'public/elt/',
+    'img' => 'public/img/',
     'js' => 'public/js/',
-	'bootstrap-js' => 'public/js/bootstrap/',
+    'bootstrap-js' => 'public/js/bootstrap/',
     'views' => 'views/',
     'avatars' => 'public/img/avatars/',
     'font-awesome' => 'public/css/font-awesome/',
     'icon' => 'public/img/icon',
-	);
+    'lib' => 'public/lib/'
+    );
 
 $page = array( //création de l'URL des pages
-	'accueil' => 'accueil',
+    'accueil' => 'accueil',
     'visite' => 'visite',
     'restaurant' => 'restaurant',
-	'noter-resto' => 'noter-resto',
-	'contact' => 'contact',
+    'noter-resto' => 'noter-resto',
+    'meteo' => 'meteo',
+    'contact' => 'contact',
     'connexion' => 'connexion',
     'inscription' => 'inscription',
-	'mon-profil' => 'mon-profil',
-    'administrateur' => 'administrateur',
-	'depot-avis' => 'depot-avis',
-	'error404' => 'error404',
-	'deconnexion' => 'deconnexion',
-	'erreur' => 'erreur'
-	 );
-
-$link = array( //création des liens de pages
-	'accueil' => 'accueil',
-    'visite' => 'visite',
-    'restaurant' => 'restaurant',
-	'contact' => 'contact',
-    'connexion' => 'connexion',
-    'inscription' => 'inscription',
-	'mon-profil' => 'mon-profil',
+    'mon-profil' => 'mon-profil',
     'administrateur' => 'administrateur',
     'depot-avis' => 'depot-avis',
-	'avis' => 'avis',
-	'error404' => 'error404',
-	'deconnexion' => 'deconnexion',
-	'erreur' => 'erreur'	
+    'avis' => 'avis',
+    'error404' => 'error404',
+    'deconnexion' => 'deconnexion',	
+    );
+
+$link = array( //création des liens de pages
+    'accueil' => 'accueil',
+    'visite' => 'visite',
+    'restaurant' => 'restaurant',
+    'noter-resto' => 'noter-resto',
+    'meteo' => 'meteo',
+    'contact' => 'contact',
+    'connexion' => 'connexion',
+    'inscription' => 'inscription',
+    'mon-profil' => 'mon-profil',
+    'administrateur' => 'administrateur',
+    'depot-avis' => 'depot-avis',
+    'avis' => 'avis',
+    'error404' => 'error404',
+    'deconnexion' => 'deconnexion',	
     );
 
 $visite = array(

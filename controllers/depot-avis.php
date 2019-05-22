@@ -7,7 +7,7 @@
             'title' => htmlspecialchars($_POST['selectVisiteTitre']),
             'message' => htmlspecialchars($_POST['contact-mess']),
             'id_profil' => htmlspecialchars($myProfil->getId()),
-            'date_time' => htmlspecialchars(date("Y-m-d H:i:s"))
+            'date_time' => htmlspecialchars(date("Y-m-d H:i:s")),
         );
 
         $avisUser = new Avis($avis);

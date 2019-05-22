@@ -12,10 +12,12 @@
 
         //Ajoute un avis dans la bdd
         public function insert(Avis $avis) {
-            $req = $this->_db->prepare('INSERT INTO avis(name, title, message, id_profil, date_time) VALUES(:name, :title, :message, :id_profil, :date_message)');
+            $req = $this->_db->prepare('INSERT INTO avis(name, title, message, id_profil, date_time, warning_comm) VALUES(:name, :title, :message, :id_profil, :date_message, :warning_comm)');
             $req->bindValue(':name', strtolower($avis->getName()));
             $req->bindValue(':title', strtolower($avis->getTitle()));
             $req->bindValue(':message', $avis->getMessage());
+            $req->bindValue(':id_profil', strtolower($avis->getId_profil()));
+            $req->bindValue(':date_message', $avis->getDate_time());
             $req->execute();
         }
 
@@ -31,7 +33,25 @@
                 $req->execute();
             }
 
+            while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+                $avisList[] = new Avis($data);
+            }
+
             return $avisList;
+        }
+
+        // Récupère le dernier message
+        public function getDateLastMessage() {
+            $req = $this->_db->query('SELECT MAX(date_time) AS "Max Date" FROM avis');
+            $data = $req->fetch(PDO::FETCH_ASSOC);
+
+            return $data['Max Date'];
+
+        }
+		public function getRegisteredCount() {
+            $req = $this->_db->prepare('SELECT * FROM avis');
+            $req->execute();
+            return $req->rowCount();
         }
     }
 ?>

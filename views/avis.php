@@ -25,8 +25,8 @@
                 <br>Le <?= date("d-m-Y", strtotime($avis->getDate_time())); ?></p>
         </div>
         <div class="col-md-9">
-            <p class="font-weight-bold titrecommentaire"><?= $avis->getTitle(); ?></p>
-            <p><?= $avis->getMessage(); ?></p>
+			
+			<!-- supprimer commentaire -->
             <?php
             if(isset($_SESSION['pseudo']) AND $myProfil->getRole() == $role['admin']):?>
                 <button id="suppr" type="button" class="btn btn-outline-danger marginbottom10px delete" data-id-avis=<?= $avis->getId(); ?>>

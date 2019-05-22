@@ -40,7 +40,25 @@
         public function setDate_time_registration($dateInscription) {
             $this->_date_time_registration = $dateInscription;
         }
-		public function getRole()
+
+        public function getId() {
+            return $this->_id;
+        }
+        public function getPseudo() {
+            return ucfirst(strtolower($this->_pseudo));
+        }
+        public function getPassword() {
+            return $this->_password;
+        }
+        public function getEmail() {
+            return $this->_email;
+        }
+
+        public function getDate_time_registration() {
+            return $this->_date_time_registration;
+        }
+
+        public function getRole()
         {
             return $this->_role;
         }
@@ -49,4 +67,7 @@
         {
             $this->_role = $role;
         }
-		?>
+
+
+    }
+?>
