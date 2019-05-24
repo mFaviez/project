@@ -58,12 +58,21 @@
             else
                 include $path['controllers'].$page['accueil'].'.php';
             break;
+        case $page['recovery-password']:
+            if(!isset($_SESSION['pseudo']))
+                include $path['controllers'].$page['recovery-password'].'.php';
+            else
+                include $path['controllers'].$page['error404'].'.php';
+        break;
         case $page['deconnexion']:
             include $path['controllers'].$page['deconnexion'].'.php';
         break;
-		//case $page['erreur']:
-          //  include $path['controllers'].$page['erreur'].'.php';
-        //break;
+		case $page['erreur']:
+            include $path['controllers'].$page['erreur'].'.php';
+        break;
+		case $page['retour-contact']:
+            include $path['controllers'].$page['retour-contact'].'.php';
+        break;
         default: //Si il ne trouve pas la valeur de p, on redirige vers l'acceuil, on pourrais le diriger vers error404
             include $path['controllers'].$page['accueil'].'.php';
         break;
@@ -122,8 +131,17 @@
             else
                 include $path['views'].$page['accueil'].'.php';
             break;
+        case $page['recovery-password']:
+            if(!isset($_SESSION['pseudo']))
+                include $path['views'].$page['recovery-password'].'.php';
+            else
+                include $path['views'].$page['error404'].'.php';
+        break;
 		case $page['erreur']:
             include $path['views'].$page['erreur'].'.php';
+        break;
+		case $page['retour-contact']:
+            include $path['views'].$page['retour-contact'].'.php';
         break;
         default: //Si il ne trouve pas une page, on redirige vers l'acceuil, on pourrais le diriger vers error404
             include $path['views'].$page['accueil'].'.php';

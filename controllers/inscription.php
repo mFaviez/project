@@ -7,7 +7,8 @@
             'pseudo' => htmlspecialchars($_POST['inscrpseudo']),
             'password' => htmlspecialchars(hash(hash_algos()[7], $_POST['inscrpassword'])),
             'password2' => htmlspecialchars(hash(hash_algos()[7], $_POST['inscrvalidationpassword'])),
-            'date_time_registration' => htmlspecialchars(date("Y-m-d H:i:s"))
+            'date_time_registration' => htmlspecialchars(date("Y-m-d H:i:s")),
+            'recovery_sentence' => htmlspecialchars(hash(hash_algos()[7], $_POST['recoverySentence']))
             );
 
         $profil = new Profil($user);

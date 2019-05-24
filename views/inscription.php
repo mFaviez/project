@@ -45,7 +45,13 @@
                     <label class="col-md-12 control-label" for="inscrvalidationpassword">Confirmer votre mot de passe</label>
                     <div class="col-md-12">
                     <input id="inscrvalidationpassword" name="inscrvalidationpassword" type="password" placeholder="confirmer votre mot de passe" class="form-control input-md" required="">
+                    </div>
+                </div>
 
+                <div class="form-group">
+                    <label class="col-md-12 control-label" for="">Phrase de récupération de mot de passe</label>
+                    <div class="col-md-12">
+                    <input id="" name="recoverySentence" type="text" placeholder="Phrase de récupération de mot de passe" class="form-control input-md" required="">
                     </div>
                 </div>
 

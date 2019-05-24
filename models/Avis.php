@@ -8,6 +8,9 @@
         private $_message;
         private $_id_profil;
         private $_date_time;
+		/*mika*/
+		private  $_reporting;
+		/*Mika*/
 
         public function __construct(array $data) {
             $this->hydrate($data);
@@ -91,15 +94,15 @@
             $this->_date_time = $dateMessage;
         }
 		/*mika*/
-		public function getwarning_comm()
+		public function getReporting()
         {
-            return $this->_warning_comm;
+            return $this->_reporting;
         }
 
 
-        public function setwarning_comm($warning_comm)
+        public function setReporting($reporting)
         {
-            $this->_warning_comm = $warning_comm;
+            $this->_reporting = $reporting;
         }
 		/*mika*/
 

@@ -4,5 +4,9 @@
 
     $userCount = $profilManager->getRegisteredCount();
     $dateLastMessage = $avisManager->getDateLastMessage();
-	$nbAvis = $avisManager->getRegisteredCount();
+    $numberAvis = $avisManager->getCountAvis();
+
+    $avisManager = new AvisManager(getDb());
+    $avisList = $avisManager->getReporting();
+
 ?>

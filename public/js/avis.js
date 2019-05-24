@@ -12,3 +12,18 @@ $('.delete').click(function() {
         }
     });
 });
+
+$('.signaler').click(function() {
+    var button = document.getElementById('sign');
+
+    $.ajax({
+        type: 'POST',
+        url: 'public/ajax/avis.php',
+        data: { 'idSign': button.dataset.idAvis },
+        dataType: 'JSON',
+        success: function(data) {
+            alert('Avis signaler !');
+            window.location.reload();
+        }
+    });
+});

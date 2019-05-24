@@ -85,14 +85,26 @@ section {
 	margin: 5px 0 5px 0;
 	text-align: center!important;
 }
-.lienaccueil {
-	color: #fff;
+.cadre-meteo {
+	padding: 5px;
+	border: solid 1px #5fbda3;
 }
-.lienaccueil:hover {
-	color: #fff;
-	text-decoration: none;
+.cadre-meteo h2 {
+	margin-bottom: 30px;
 }
-
+.texte-meteo {
+	font-size: 22px;
+}
+.icone-meteo {
+	width: 80px;
+	margin-left: 15%;
+}
+.texte-horaire {
+	font-size: 16px;	
+}
+.titre-meteo {
+	font-size: 24px;	
+}
 /* RESPONSIVE */
 @media (min-width: 768px) {
 .navbar-brand {
@@ -108,13 +120,12 @@ section {
 }
 #titre-accueil h1 {	
 	font-size: 3em;	
-}	
+}
 }
 @media (min-width: 992px) {
 .container {
    width: 970px;
 }
-
 }
 @media (min-width: 1200px) {
 .container {
@@ -125,4 +136,5 @@ section {
 }
 #titre-accueil h1 {	
 	font-size: 4em;	
+}
 }

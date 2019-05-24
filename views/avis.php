@@ -25,6 +25,21 @@
                 <br>Le <?= date("d-m-Y", strtotime($avis->getDate_time())); ?></p>
         </div>
         <div class="col-md-9">
+			<?php
+			if ($avis->getReporting() == 1):
+				echo '<p class="text-success"> Vérification du contenu en cours</p>';
+				else:
+				?>
+				 <p class="font-weight-bold titrecommentaire"><?= $avis->getTitle();?></p>
+            	<p><?= $avis->getMessage();?></p>
+			<?php endif; ?>							
+						
+			<!-- Bouton signaler Mika -->
+				<?php if (isset($_SESSION['pseudo'])):?>
+				<button id="sign" type="button" class="btn-info marginbottom10px signaler" data-id-avis=<?= $avis->getId(); ?>>
+                    Signaler
+                </button>	
+                <?php endif;?>			
 			
 			<!-- supprimer commentaire -->
             <?php

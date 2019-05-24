@@ -13,11 +13,12 @@
 
          //Ajoute le profil dans la bdd
         public function insert(Profil $profil) {
-            $req = $this->_db->prepare('INSERT INTO profil(pseudo, password, email, date_time_registration) VALUES(:pseudo, :password, :email, :dateInscription)');
+            $req = $this->_db->prepare('INSERT INTO profil(pseudo, password, email, date_time_registration, recovery_sentence) VALUES(:pseudo, :password, :email, :dateInscription, :recoverySentence)');
             $req->bindValue(':pseudo', strtolower($profil->getPseudo()));
             $req->bindValue(':password', $profil->getPassword());
             $req->bindValue(':email', strtolower($profil->getEmail()));
             $req->bindValue(':dateInscription', $profil->getDate_time_registration());
+            $req->bindValue(':recoverySentence', $profil->getRecovery_sentence());
             $req->execute();
         }
 
@@ -79,6 +80,21 @@
             $req->execute();
             return $req->rowCount();
         }
-		
+
+        public function checkMailAndSentence($email, $recoverySentence) {
+            $req = $this->_db->prepare('SELECT * FROM profil WHERE email = ? AND recovery_sentence = ?');
+            $req->execute(array($email, $recoverySentence));
+            if($req->rowCount() == 1) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+        public function updatePassword($email, $password) {
+            $req = $this->_db->prepare('UPDATE profil SET password = ? WHERE email = ?');
+            $req->execute(array($password, $email));
+            return true;
+        }
     }
 ?>

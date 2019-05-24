@@ -8,6 +8,7 @@
         private $_email;
         private $_date_time_registration;
         private $_role;
+        private $_recovery_sentence;
 
         public function __construct(array $data) {
             $this->hydrate($data);
@@ -68,6 +69,12 @@
             $this->_role = $role;
         }
 
+        public function getRecovery_sentence() {
+            return $this->_recovery_sentence;
+        }
 
+        public function setRecovery_sentence($recoverySentence) {
+            $this->_recovery_sentence = $recoverySentence;
+        }
     }
 ?>

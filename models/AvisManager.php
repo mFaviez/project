@@ -12,7 +12,7 @@
 
         //Ajoute un avis dans la bdd
         public function insert(Avis $avis) {
-            $req = $this->_db->prepare('INSERT INTO avis(name, title, message, id_profil, date_time, warning_comm) VALUES(:name, :title, :message, :id_profil, :date_message, :warning_comm)');
+            $req = $this->_db->prepare('INSERT INTO avis(name, title, message, id_profil, date_time) VALUES(:name, :title, :message, :id_profil, :date_message)');
             $req->bindValue(':name', strtolower($avis->getName()));
             $req->bindValue(':title', strtolower($avis->getTitle()));
             $req->bindValue(':message', $avis->getMessage());
@@ -48,10 +48,22 @@
             return $data['Max Date'];
 
         }
-		public function getRegisteredCount() {
+
+        public function getCountAvis() {
             $req = $this->_db->prepare('SELECT * FROM avis');
             $req->execute();
             return $req->rowCount();
+        }
+
+        public function getReporting() {
+            $avisList = [];
+            
+            $req = $this->_db->prepare('SELECT * FROM avis WHERE reporting = 1');
+            $req->execute();
+            while($data = $req->fetch(PDO::FETCH_ASSOC)) {
+                $avisList[] = new Avis($data);
+            }
+            return $avisList;
         }
     }
 ?>

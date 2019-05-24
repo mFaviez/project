@@ -8,7 +8,7 @@
         <!-- *****************************FORMULAIRE GENERE AVEC BOOTSNIPP******************************* -->
     <div class="row">	
         <div class="col-md-4 offset-md-4">	
-            <form action="" method="post" accept-charset="UTF-8" autocomplete="off" class="form-horizontal" id="formconnexion">
+            <form method="post" accept-charset="UTF-8" autocomplete="off" class="form-horizontal" id="formconnexion">  <!-- à remettre dans la balise action="" -->
             <fieldset>
 
             <!-- Text input-->
@@ -25,8 +25,8 @@
                 <label class="col-md-12 control-label" for="password">Mot de passe</label>
                 <div class="col-md-12">
                 <input id="password" name="password" type="password" placeholder="mot de passe" class="form-control input-md" required="">
-
                 </div>
+                <p>Mot de passe oublié ?<a href="<?= $link['recovery-password']?>"> Réinitialiser ici !</a></p>
             </div>
 
             <!-- Button -->

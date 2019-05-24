@@ -31,7 +31,10 @@ $page = array( //création de l'URL des pages
     'depot-avis' => 'depot-avis',
     'avis' => 'avis',
     'error404' => 'error404',
-    'deconnexion' => 'deconnexion',	
+    'deconnexion' => 'deconnexion',
+    'erreur' => 'erreur',
+    'recovery-password' => 'recovery-password',
+	'retour-contact' => 'retour-contact'
     );
 
 $link = array( //création des liens de pages
@@ -48,7 +51,10 @@ $link = array( //création des liens de pages
     'depot-avis' => 'depot-avis',
     'avis' => 'avis',
     'error404' => 'error404',
-    'deconnexion' => 'deconnexion',	
+    'deconnexion' => 'deconnexion',
+    'erreur' => 'erreur',
+    'recovery-password' => 'recovery-password',
+	'retour-contact' => 'retour-contact'
     );
 
 $visite = array(

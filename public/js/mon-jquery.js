@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	
-	$("#deconnexion, #supprcomm, #adm").hide();
-	
-	
 
     $('.link-gallery').click(function(){
 		var galleryId = $(this).attr('data-target');
