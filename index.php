@@ -28,9 +28,6 @@
         case $page['meteo']:
             include $path['controllers'].$page['meteo'].'.php';
         break;
-        case $page['contact']:
-            include $path['controllers'].$page['contact'].'.php';
-        break;
         case $page['depot-avis']:
             if(isset($_SESSION['pseudo']))
                 include $path['controllers'].$page['depot-avis'].'.php';
@@ -100,9 +97,6 @@
             break;
         case $page['meteo']:
             include $path['views'].$page['meteo'].'.php';
-        break;
-        case $page['contact']:
-            include $path['views'].$page['contact'].'.php';
         break;
         case $page['depot-avis']:
             if(isset($_SESSION['pseudo']))

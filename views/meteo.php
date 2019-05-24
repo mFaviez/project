@@ -41,7 +41,7 @@
 		
 		<div class="col-md-12">
 				<!-- CARTE -->
-			  <div id="mapdiv" style="height: 300px;"></div>
+			  <div id="mapdiv" style="height: 500px;"></div>
 			  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
 			  <script>
 
@@ -161,7 +161,7 @@
 				  lat: 47.658236
 				};
 
-				let zoom = 16;
+				let zoom = 14;
 
 				let markers = new OpenLayers.Layer.Markers("Markers");
 				map.addLayer(markers);
