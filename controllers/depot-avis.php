@@ -15,6 +15,6 @@
 
         $avisManager->insert($avisUser);
 
-        $sucess = "Votre avis a bien été enregistrée.";
+        $sucess = "Votre avis a bien été enregistré.";
     }
 ?>
