@@ -134,6 +134,9 @@
 		case $page['erreur']:
             include $path['views'].$page['erreur'].'.php';
         break;
+        case $page['contact']:
+            include $path['views'].$page['contact'].'.php';
+        break;
 		case $page['retour-contact']:
             include $path['views'].$page['retour-contact'].'.php';
         break;

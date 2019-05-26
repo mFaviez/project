@@ -11,6 +11,13 @@ body {
 	background-position: top;
 	background-repeat: no-repeat;
 }
+.lienaccueil {
+	color: #fff;
+}
+.lienaccueil:hover {
+	color: #000;
+	text-decoration: none;
+}
 .galerie [class*="col"] {
 	margin-bottom: 20px;
 }

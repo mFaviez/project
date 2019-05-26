@@ -1,10 +1,10 @@
 <?php
 
-$dbname = "project";
-$user   = "root";
-$pass   = "";
+$dbname = "votregrapyimn";
+$user   = "votregrapyimn";
+$pass   = "Webdesigner95";
 try {
-    $db = new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8", $user, $pass);
+    $db = new PDO("mysql:host=votregrapyimn.mysql.db;dbname=$dbname;charset=utf8", $user, $pass);
 } catch(PDOException $e) {
     die($e->getMessage());
 }

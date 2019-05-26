@@ -22,7 +22,7 @@ $('.signaler').click(function() {
         data: { 'idSign': button.dataset.idAvis },
         dataType: 'JSON',
         success: function(data) {
-            alert('Avis signaler !');
+            alert('Avis signalé !');
             window.location.reload();
         }
     });

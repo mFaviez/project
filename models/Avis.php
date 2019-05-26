@@ -8,9 +8,7 @@
         private $_message;
         private $_id_profil;
         private $_date_time;
-		/*mika*/
 		private  $_reporting;
-		/*Mika*/
 
         public function __construct(array $data) {
             $this->hydrate($data);
@@ -93,7 +91,7 @@
         {
             $this->_date_time = $dateMessage;
         }
-		/*mika*/
+	
 		public function getReporting()
         {
             return $this->_reporting;
@@ -104,7 +102,7 @@
         {
             $this->_reporting = $reporting;
         }
-		/*mika*/
+	
 
     }
 ?>

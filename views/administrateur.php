@@ -52,9 +52,9 @@
 			<p class="font-weight-bold titrecommentaire"><?= $avis->getTitle();?></p>
         	<p><?= $avis->getMessage();?></p>							
 						
-			<!-- Bouton signaler Mika -->
+			<!-- Bouton valider -->
 				<?php if (isset($_SESSION['pseudo'])):?>
-				<button id="valide" type="button" class="btn-info marginbottom10px valide" data-id-avis=<?= $avis->getId(); ?>>
+				<button id="valide" type="button" class="btn btn-outline-success marginbottom10px valide" data-id-avis=<?= $avis->getId(); ?>>
                     Valider
                 </button>	
                 <?php endif;?>			

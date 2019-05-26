@@ -7,7 +7,7 @@ $('.valide').click(function() {
         data: { 'valideAvisId': button.dataset.idAvis },
         dataType: 'JSON',
         success: function(data) {
-            alert('Avis valider !');
+            alert('Avis validé !');
             window.location.reload();
         }
     });
@@ -22,7 +22,7 @@ $('.deleteAvis').click(function() {
         data: { 'deleteAvisId': button.dataset.idAvis },
         dataType: 'JSON',
         success: function(data) {
-            alert('Avis supprimer !');
+            alert('Avis supprimé !');
             window.location.reload();
         }
     });

@@ -34,9 +34,9 @@
             	<p><?= $avis->getMessage();?></p>
 			<?php endif; ?>							
 						
-			<!-- Bouton signaler Mika -->
+			<!-- Bouton signaler -->
 				<?php if (isset($_SESSION['pseudo'])):?>
-				<button id="sign" type="button" class="btn-info marginbottom10px signaler" data-id-avis=<?= $avis->getId(); ?>>
+				<button id="sign" type="button" class="btn btn-outline-info marginbottom10px signaler" data-id-avis=<?= $avis->getId(); ?>>
                     Signaler
                 </button>	
                 <?php endif;?>			
